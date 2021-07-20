@@ -24,24 +24,8 @@ Add file `src/resources/application.yml` with content:
       key-alias: tomcat
       key-password: password
     port: 8444
-    ```
+```
     
-add class `SecurityConfig` with content:
-
-```
-@EnableWebSecurity
-public class SecurityConfig
-        extends WebSecurityConfigurerAdapter {
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .requiresChannel()
-                .anyRequest()
-                .requiresSecure();
-    }
-}
-```
-
 Add class `ServerConfig` with content:
 
 ```
