@@ -27,7 +27,7 @@ server:
     port: 8444
 ```
 
-Add class `ServerConfig` with content:
+To make redirection from HTTP to HTTPS add class `ServerConfig` with content:
 
 ```
 @Configuration
