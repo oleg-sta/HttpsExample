@@ -27,25 +27,6 @@ server:
     port: 8444
 ```
 
-add dependency to `build.gradle`:
-`    implementation 'org.springframework.boot:spring-boot-starter-security'`
-    
-add class `SecurityConfig` with content:
-
-```
-@EnableWebSecurity
-public class SecurityConfig
-        extends WebSecurityConfigurerAdapter {
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .requiresChannel()
-                .anyRequest()
-                .requiresSecure();
-    }
-}
-```
-
 Add class `ServerConfig` with content:
 
 ```
