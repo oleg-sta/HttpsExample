@@ -16,7 +16,8 @@ Put generate keypair into `src/resources`
 
 Add file `src/resources/application.yml` with content:
 
-``server:
+```
+server:
     ssl:
       key-store: classpath:keystore.p12
       key-store-password: password
@@ -24,11 +25,11 @@ Add file `src/resources/application.yml` with content:
       key-alias: tomcat
       key-password: password
     port: 8444
-    ``
+```
     
 add class `SecurityConfig` with content:
 
-``
+```
 @EnableWebSecurity
 public class SecurityConfig
         extends WebSecurityConfigurerAdapter {
@@ -40,7 +41,7 @@ public class SecurityConfig
                 .requiresSecure();
     }
 }
-``
+```
 
 Add class `ServerConfig` with content:
 
@@ -74,4 +75,4 @@ public class ServerConfig {
         return connector;
     }
 }
-``
+````
