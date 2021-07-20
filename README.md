@@ -26,6 +26,9 @@ server:
       key-password: password
     port: 8444
 ```
+
+add dependency to `build.gradle`:
+`    implementation 'org.springframework.boot:spring-boot-starter-security'`
     
 add class `SecurityConfig` with content:
 
