@@ -24,7 +24,7 @@ server:
       key-store-type: pkcs12
       key-alias: key
       key-password: password
-    port: 8444
+    port: 8443
 ```
 
 To make redirection from HTTP to HTTPS add class `ServerConfig` with content:
@@ -55,7 +55,7 @@ public class ServerConfig {
         connector.setScheme("http");
         connector.setPort(8081);
         connector.setSecure(false);
-        connector.setRedirectPort(8444);
+        connector.setRedirectPort(8443);
         return connector;
     }
 }
